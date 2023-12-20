@@ -11,7 +11,8 @@ func loadRoutes() *chi.Mux {
 	// add the middelware logger to the current router :
 	router.Use(middleware.Logger)
 	// define endpoint:
-	router.Get("/Ping", func( w http.ResponseWriter, r *http.Request){
+	router.Get("/Ping", 
+	func( w http.ResponseWriter, r *http.Request){
 			w.WriteHeader(http.StatusOK)
 	})
 	// define endpoint with orders prefixer :
